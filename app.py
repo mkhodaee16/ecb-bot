@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
-from flask_socketio import SocketIO, emit
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
+from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -11,6 +11,8 @@ import MetaTrader5 as mt5
 import threading
 import time
 from services.telegram_service import TelegramService
+from services.tunnel_service import TunnelService
+from functools import wraps
 
 # Load environment variables
 load_dotenv()
@@ -39,6 +41,13 @@ telegram_service = TelegramService()
 
 
 def init_admin_user():
+    admin_user = User.query.filter_by(username=os.getenv('ADMIN_USER')).first()
+    if not admin_user:
+        admin_user = User(username=os.getenv('ADMIN_USER'))
+        admin_user.set_password(os.getenv('ADMIN_PASS'))
+        db.session.add(admin_user)
+        db.session.commit()
+        app.logger.info("Admin user created")
     try:
         # Check if admin exists
         admin = User.query.filter_by(username=os.getenv('ADMIN_USER')).first()
@@ -71,6 +80,17 @@ def safe_init_db():
     except Exception as e:
         logger.error(f"Database initialization error: {str(e)}")
         return False
+
+def check_auth(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if os.getenv('FLASK_ENV') == 'development':
+            return f(*args, **kwargs)
+        if not current_user.is_authenticated:
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
+
 
 # Database Models
 
@@ -177,17 +197,25 @@ def init_mt5():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+        
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
+        
+        app.logger.info(f"Login attempt for user: {username}")
+        
         user = User.query.filter_by(username=username).first()
-
+        
         if user and user.check_password(password):
+            app.logger.info(f"Login successful for {username}")
             login_user(user)
             return redirect(url_for('home'))
-
-        return render_template('login.html', error="Invalid credentials")
-
+        
+        app.logger.error(f"Login failed for {username}")
+        flash('Invalid username or password')
+    
     return render_template('login.html')
 
 
@@ -312,7 +340,7 @@ def webhook():
 
 
 @app.route('/')
-@login_required
+@check_auth
 def home():
     webhooks = Webhook.query.all()
     positions = Position.query.all()
@@ -562,52 +590,66 @@ def price_update_thread(app):
     with app.app_context():
         while True:
             try:
-                # Get MT5 positions
-                mt5_positions = check_mt5_positions()
-                if mt5_positions is None:
-                    continue
+                # Get all active positions
+                positions = Position.query.filter(Position.status.in_(['Open', 'Pending'])).all()
+                
+                price_updates = {}
+                for pos in positions:
+                    symbol_info = mt5.symbol_info(pos.symbol)
+                    if symbol_info is None:
+                        continue
 
-                # Get DB positions
-                db_positions = Position.query.filter(
-                    Position.status.in_(['Open', 'Pending'])
-                ).all()
+                    price = symbol_info.bid if pos.type.lower().includes('buy') else symbol_info.ask
+                    change = price - pos.price_open
+                    price_updates[pos.symbol] = {
+                        'bid': symbol_info.bid,
+                        'ask': symbol_info.ask,
+                        'change': change
+                    }
 
-                # Update positions and prices
-                for db_pos in db_positions:
-                    # Find matching MT5 position
-                    mt5_pos = next(
-                        (p for p in mt5_positions if p['ticket'] == db_pos.ticket),
-                        None
-                    )
+                    # Update position status if needed
+                    if pos.status == 'Pending':
+                        # Check if pending order should be activated
+                        if (pos.type == 'Buy Limit' and price <= pos.price_open) or \
+                           (pos.type == 'Sell Limit' and price >= pos.price_open) or \
+                           (pos.type == 'Buy Stop' and price >= pos.price_open) or \
+                           (pos.type == 'Sell Stop' and price <= pos.price_open):
+                            pos.status = 'Open'
+                            db.session.commit()
+                            # Send telegram notification for status change
+                            telegram_service.position_status_changed(pos)
+                    elif pos.status == 'Open':
+                        # Check for SL/TP
+                        if pos.type.startswith('Buy'):
+                            if price <= pos.sl:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (price - pos.price_open) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                            elif price >= pos.tp:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (price - pos.price_open) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                        else:  # Sell positions
+                            if price >= pos.sl:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (pos.price_open - price) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                            elif price <= pos.tp:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (pos.price_open - price) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
 
-                    if mt5_pos:
-                        # Position is open in MT5
-                        if db_pos.status != 'Open':
-                            db_pos.status = 'Open'
-                            telegram_service.position_status_changed(db_pos)
-                        db_pos.profit = mt5_pos['profit']
-
-                        # Emit price update
-                        socketio.emit('price_update', {
-                            'ticket': db_pos.ticket,
-                            'symbol': db_pos.symbol,
-                            'current_price': mt5_pos['current_price'],
-                            'profit': mt5_pos['profit']
-                        })
-                    elif db_pos.status == 'Open':
-                        # Position not found in MT5 but was open
-                        db_pos.status = 'Closed'
-
-                        # Get last price from MT5
-                        tick = mt5.symbol_info_tick(db_pos.symbol)
-                        if tick:
-                            db_pos.price_close = tick.bid if db_pos.type.lower().startswith('buy') else tick.ask
-
-                        # Send telegram notification for status change
-                        telegram_service.position_status_changed(db_pos)
-
-                # Send telegram notification for status change
-                telegram_service.position_status_changed(db_pos)
+                # Emit price updates via WebSocket
+                if price_updates:
+                    socketio.emit('price_update', {'prices': price_updates})
 
                 db.session.commit()
                 time.sleep(1)
@@ -623,6 +665,12 @@ if __name__ == "__main__":
         db.create_all()
         init_admin_user()
 
+    # Start tunnel service
+    tunnel_service = TunnelService(port=5000)
+    tunnel_url = tunnel_service.start_ngrok()  # or tunnel_service.start_localtunnel()
+    if tunnel_url:
+        logger.info(f"Webhook URL: {tunnel_url}/webhook")
+    
     # Start price update thread
     thread = threading.Thread(
         target=price_update_thread,
@@ -631,4 +679,4 @@ if __name__ == "__main__":
     )
     thread.start()
 
-    socketio.run(app, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    socketio.run(app, host='0.0.0.0', port=5000)

@@ -1,0 +1,7 @@
+version: "2"
+authtoken: 2repyZpBG4BN6WVJj0jqW0VvHjM_H5DYxaWyYUA7aHytkm5K
+tunnels:
+  flask-app:
+    proto: http
+    addr: 5000
+    domain: noted-raptor-evident.ngrok-free.app

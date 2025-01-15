@@ -1,0 +1,2112 @@
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.39.19:5000
+[33mPress CTRL+C to quit[0m
+Admin user created successfully
+Opening tunnel named: http-5000-5754b54e-2698-44a0-a9ac-a2c8e102d56a
+t=2025-01-15T11:56:39+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T11:56:39+0330 lvl=info msg="ignoring default config path, could not stat it" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T11:56:39+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok: The system cannot find the file specified."
+t=2025-01-15T11:56:39+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2025-01-15T11:56:40+0330 lvl=info msg="update available" obj=updater
+t=2025-01-15T11:56:40+0330 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n"
+t=2025-01-15T11:56:40+0330 lvl=eror msg="session closing" obj=tunnels.session err="authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n"
+t=2025-01-15T11:56:40+0330 lvl=info msg="received stop request" obj=app stopReq="{err:{Remote:true Inner:{Inner:0xc0006da3f0}} restart:false}"
+Failed to start ngrok: The ngrok process errored on start: authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Opening tunnel named: http-5000-1c4c8aef-1d2d-43a0-8639-d41ccfbe5891
+t=2025-01-15T12:43:55+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T12:43:55+0330 lvl=info msg="ignoring default config path, could not stat it" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T12:43:55+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok: The system cannot find the file specified."
+t=2025-01-15T12:43:55+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2025-01-15T12:43:55+0330 lvl=info msg="update available" obj=updater
+t=2025-01-15T12:43:56+0330 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n"
+t=2025-01-15T12:43:56+0330 lvl=eror msg="session closing" obj=tunnels.session err="authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n"
+t=2025-01-15T12:43:56+0330 lvl=info msg="received stop request" obj=app stopReq="{err:{Remote:true Inner:{Inner:0xc000a40190}} restart:false}"
+t=2025-01-15T12:43:56+0330 lvl=eror msg="terminating with error" obj=app err="authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n"
+Failed to start ngrok: The ngrok process errored on start: authentication failed: Usage of ngrok requires a verified account and authtoken.\n\nSign up for an account: https://dashboard.ngrok.com/signup\nInstall your authtoken: https://dashboard.ngrok.com/get-started/your-authtoken\r\n\r\nERR_NGROK_4018\r\n.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Opening tunnel named: http-5000-44d97358-b9bc-4391-afa2-74a91a575880
+t=2025-01-15T12:48:02+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T12:48:02+0330 lvl=info msg="using configuration at default config path" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T12:48:02+0330 lvl=info msg="open config file" path=C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+t=2025-01-15T12:48:02+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.exe: The system cannot find the file specified."
+t=2025-01-15T12:48:02+0330 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2025-01-15T12:48:02+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+t=2025-01-15T12:48:07+0330 lvl=warn msg="failed to check for update" obj=updater err="Post \"https://update.equinox.io/check\": context deadline exceeded"
+t=2025-01-15T12:48:18+0330 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="failed to send authentication request: session closed"
+Killing ngrok process: 30368
+Failed to start ngrok: The ngrok process errored on start: failed to send authentication request: session closed.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 12:49:30] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 12:49:30] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 12:49:31] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 12:49:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+Opening tunnel named: http-5000-7545a81f-80ed-4aef-9682-33d8b130f996
+t=2025-01-15T13:13:49+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T13:13:49+0330 lvl=info msg="using configuration at default config path" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T13:13:49+0330 lvl=info msg="open config file" path=C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+t=2025-01-15T13:13:49+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.exe: The system cannot find the file specified."
+t=2025-01-15T13:13:49+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4040 allow_hosts=[]
+t=2025-01-15T13:13:50+0330 lvl=info msg="update available" obj=updater
+t=2025-01-15T13:13:50+0330 lvl=info msg="client session established" obj=tunnels.session
+t=2025-01-15T13:13:50+0330 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2025-01-15T13:13:50+0330 lvl=info msg=start pg=/api/tunnels id=e694ef3448fc7c99
+t=2025-01-15T13:13:50+0330 lvl=info msg=end pg=/api/tunnels id=e694ef3448fc7c99 status=200 dur=0s
+t=2025-01-15T13:13:50+0330 lvl=info msg=start pg=/api/tunnels id=b701a398beb2c2b3
+t=2025-01-15T13:13:50+0330 lvl=info msg=end pg=/api/tunnels id=b701a398beb2c2b3 status=200 dur=0s
+t=2025-01-15T13:13:50+0330 lvl=info msg=start pg=/api/tunnels id=1d14a17d9043a68d
+t=2025-01-15T13:13:51+0330 lvl=info msg="started tunnel" obj=tunnels name=http-5000-7545a81f-80ed-4aef-9682-33d8b130f996 addr=http://localhost:5000 url=https://noted-raptor-evident.ngrok-free.app
+Ngrok tunnel established: https://noted-raptor-evident.ngrok-free.app
+t=2025-01-15T13:13:51+0330 lvl=info msg=end pg=/api/tunnels id=1d14a17d9043a68d status=201 dur=259.0426ms
+Webhook URL: https://noted-raptor-evident.ngrok-free.app/webhook
+Opening tunnel named: http-5000-144d5f02-3cf6-405d-9d71-1feaee9b766a
+t=2025-01-15T13:17:23+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T13:17:23+0330 lvl=info msg="using configuration at default config path" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T13:17:23+0330 lvl=info msg="open config file" path=C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+t=2025-01-15T13:17:23+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.exe: The system cannot find the file specified."
+t=2025-01-15T13:17:23+0330 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2025-01-15T13:17:23+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+t=2025-01-15T13:17:24+0330 lvl=info msg="update available" obj=updater
+t=2025-01-15T13:17:25+0330 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+t=2025-01-15T13:17:25+0330 lvl=eror msg="session closing" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+Failed to start ngrok: The ngrok process errored on start: authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Opening tunnel named: http-5000-5bdc6034-e923-4ba2-bb7f-7a15c51b5321
+t=2025-01-15T13:21:09+0330 lvl=info msg="no configuration paths supplied"
+t=2025-01-15T13:21:09+0330 lvl=info msg="using configuration at default config path" path=C:\\Users\\Asus\\AppData\\Local/ngrok/ngrok.yml
+t=2025-01-15T13:21:09+0330 lvl=info msg="open config file" path=C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.yml err=nil
+t=2025-01-15T13:21:09+0330 lvl=eror msg="unable to evaluate ngrok agent binary path for symlinks" obj=tunnels.session err="CreateFile C:\\Users\\Asus\\AppData\\Local\\ngrok\\ngrok.exe: The system cannot find the file specified."
+t=2025-01-15T13:21:09+0330 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2025-01-15T13:21:09+0330 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4041 allow_hosts=[]
+t=2025-01-15T13:21:10+0330 lvl=info msg="update available" obj=updater
+t=2025-01-15T13:21:10+0330 lvl=eror msg="failed to reconnect session" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+t=2025-01-15T13:21:10+0330 lvl=eror msg="session closing" obj=tunnels.session err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+t=2025-01-15T13:21:10+0330 lvl=info msg="received stop request" obj=app stopReq="{err:{Remote:true Inner:{Inner:0xc000a80360}} restart:false}"
+t=2025-01-15T13:21:10+0330 lvl=eror msg="terminating with error" obj=app err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+t=2025-01-15T13:21:10+0330 lvl=crit msg="command failed" err="authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n"
+Failed to start ngrok: The ngrok process errored on start: authentication failed: Your account is limited to 1 simultaneous ngrok agent sessions.\nYou can run multiple simultaneous tunnels from a single agent session by defining the tunnels in your agent configuration file and starting them with the command `ngrok start --all`.\nRead more about the agent configuration file: https://ngrok.com/docs/secure-tunnels/ngrok-agent/reference/config\nYou can view your current agent sessions in the dashboard:\nhttps://dashboard.ngrok.com/agents\r\n\r\nERR_NGROK_108\r\n.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 13:23:26] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 13:23:26] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 13:23:27] "GET /static/img/logo.png HTTP/1.1" 200 -
+Received webhook data: {'status': 'test', 'tradekey': 'ICT@MoneyMaker2025!', 'action': 'open_position', 'order_type': 'buy limit', 'symbol': 'EURUSD', 'volume': '1.0', 'price': '1.02990', 'stop_loss': '1.02980', 'take_profit': '1.03045', 'RR': '3.93'}
+MT5 request: {'action': 5, 'symbol': 'EURUSD', 'volume': 1.0, 'type': 2, 'price': 1.0299, 'sl': 1.0298, 'tp': 1.03045}
+MT5 response: OrderSendResult(retcode=10009, deal=0, order=3233504826, volume=1.0, price=0.0, bid=0.0, ask=0.0, comment='Request executed', request_id=2281976977, retcode_external=0, request=TradeRequest(action=5, magic=0, order=0, symbol='EURUSD', volume=1.0, price=1.0299, stoplimit=0.0, sl=1.0298, tp=1.03045, deviation=0, type=2, type_filling=0, type_time=0, expiration=0, comment='', position=0, position_by=0))
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 13:23:42] "POST /webhook HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:20:19] "[32mGET / HTTP/1.1[0m" 302 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:20:19] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:20:20] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:20:41] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:20:41] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:20:57] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:20:58] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:21:20] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:21:21] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:23:13] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:23:14] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:23:16] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 14:23:17] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:23:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:23:53] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:23:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:23:57] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:23:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:23:57] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:23:58] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:23:58] "GET /static/js/main.js HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:23:59] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:24:15] "GET /api/webhook/1 HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:24:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 14:24:22] "GET /static/favicon/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:24:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 14:24:24] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Received webhook data: {'status': 'test', 'tradekey': 'ICT@MoneyMaker2025!', 'action': 'open_position', 'order_type': 'buy limit', 'symbol': 'EURUSD', 'volume': '1.0', 'price': '1.02990', 'stop_loss': '1.02980', 'take_profit': '1.03045', 'RR': '3.93'}
+MT5 request: {'action': 5, 'symbol': 'EURUSD', 'volume': 1.0, 'type': 2, 'price': 1.0299, 'sl': 1.0298, 'tp': 1.03045}
+MT5 response: OrderSendResult(retcode=10009, deal=0, order=3233728919, volume=1.0, price=0.0, bid=0.0, ask=0.0, comment='Request executed', request_id=835868, retcode_external=0, request=TradeRequest(action=5, magic=0, order=0, symbol='EURUSD', volume=1.0, price=1.0299, stoplimit=0.0, sl=1.0298, tp=1.03045, deviation=0, type=2, type_filling=0, type_time=0, expiration=0, comment='', position=0, position_by=0))
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:25:01] "POST /webhook HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:25:19] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:25:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:25:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:25:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:25:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:25:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:25:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:25:22] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 14:25:23] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:25:43] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:25:44] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:25:47] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:25:48] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:26:06] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:26:06] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:27:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 14:27:04] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:27:04] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:27:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:27:06] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:27:06] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:27:07] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:27:08] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:32:12] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:32:13] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:32:15] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:32:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:33:05] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:33:06] "POST /login?next=/ HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:33:06] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:33:08] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:33:09] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:33:10] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:33:11] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:39:39] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:39:39] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:39:41] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:39:41] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:40:40] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:40:40] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:40:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:40:52] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 14:40:53] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:40:53] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:40:57] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:41:01] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:41:01] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:41:22] "[32mGET / HTTP/1.1[0m" 302 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:41:22] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:41:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:41:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:46:26] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:46:34] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:46:36] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:37] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:46:39] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:40] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 14:46:41] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:41] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:46:47] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:47] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:46:52] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:46:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:47:11] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:47:11] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:47:12] "GET /static/favicon/favicon-16x16.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 14:47:12] "GET /static/favicon/apple-touch-icon.png HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:47:17] "POST /login HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 14:47:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:07:23] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:07:27] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:07:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:07:29] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:29] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:07:31] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:31] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:07:32] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:33] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:07:41] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:07:42] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:11:22] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:23] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:11:27] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:11:28] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:28] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:11:29] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:29] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:11:29] "POST /login HTTP/1.1" 200 -
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:11:30] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:11:42] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:42] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:11:44] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:44] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:11:47] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:47] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:11:49] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:50] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:11:51] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:11:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:15:08] "[32mGET / HTTP/1.1[0m" 302 -
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+127.0.0.1 - - [15/Jan/2025 15:15:09] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:15:10] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:15:23] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:15:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:15:25] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:15:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:15:26] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:15:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:15:34] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:15:35] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:17:49] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 15:17:49] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:17:49] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:17:52] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:17:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:17:53] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:17:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 15:28:04] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:28:05] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:28:09] "POST /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:28:09] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Admin user created
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:43:47] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:48] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:43:51] "GET /login?next=/ HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:51] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:43:52] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+Login attempt for user: adminuser
+Login successful for adminuser
+127.0.0.1 - - [15/Jan/2025 15:43:54] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 15:43:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:54] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:55] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:55] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:55] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:43:59] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:44:00] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:00] "GET /logs HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:00] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:01] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:44:13] "GET /positions HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:14] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:14] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "GET /logs HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "GET /webhooks HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:16] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 15:44:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:54] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:54] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:54] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:44:55] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:44:58] "GET /static/favicon/favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:04] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:11] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:12] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:16] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:18] "[32mGET /positions HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 15:45:19] "GET /login?next=/positions HTTP/1.1" 200 -
+Login attempt for user: adminuser
+Login successful for adminuser
+127.0.0.1 - - [15/Jan/2025 15:45:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 15:45:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:30] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:33] "GET /positions HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:33] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:36] "GET /webhooks HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 15:45:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:37] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 15:45:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://100.127.255.249:5000
+[33mPress CTRL+C to quit[0m
+Updating authtoken for default "config_path" of "ngrok_path": C:\Users\Asus\AppData\Local\ngrok\ngrok.exe
+Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.39.19:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [15/Jan/2025 16:42:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 16:42:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:22] "[33mGET /static/favicon/site.webmanifest HTTP/1.1[0m" 404 -
+127.0.0.1 - - [15/Jan/2025 16:42:22] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:42:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:24] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:25] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:42:42] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:42:42] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:42:44] "GET /static/favicon/favicon.ico HTTP/1.1" 200 -
+Login attempt for user: adminuser
+Login successful for adminuser
+127.0.0.1 - - [15/Jan/2025 16:43:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:43:02] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:04] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:04] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:04] "GET /static/img/logo.png HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:05] "GET /static/js/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:18] "GET /positions HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:19] "GET /logs HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:22] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:34] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:43:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:35] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:43:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+Received webhook data: {'status': 'test', 'tradekey': 'ICT@MoneyMaker2025!', 'action': 'open_position', 'order_type': 'buy limit', 'symbol': 'EURUSD', 'volume': '1.0', 'price': '1.02990', 'stop_loss': '1.02980', 'take_profit': '1.03045', 'RR': '3.93'}
+MT5 request: {'action': 5, 'symbol': 'EURUSD', 'volume': 1.0, 'type': 2, 'price': 1.0299, 'sl': 1.0298, 'tp': 1.03045}
+MT5 response: OrderSendResult(retcode=10015, deal=0, order=0, volume=0.0, price=0.0, bid=0.0, ask=0.0, comment='Invalid price', request_id=3831702687, retcode_external=0, request=TradeRequest(action=5, magic=0, order=0, symbol='EURUSD', volume=1.0, price=1.0299, stoplimit=0.0, sl=1.0298, tp=1.03045, deviation=0, type=2, type_filling=0, type_time=0, expiration=0, comment='', position=0, position_by=0))
+127.0.0.1 - - [15/Jan/2025 16:44:37] "[31m[1mPOST /webhook HTTP/1.1[0m" 400 -
+127.0.0.1 - - [15/Jan/2025 16:46:08] "GET /logs HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:46:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:10] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:13] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:46:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:14] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:46:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:18] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:46:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:42] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:42] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:46:42] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+Received webhook data: {'status': 'test', 'tradekey': 'ICT@MoneyMaker2025!', 'action': 'open_position', 'order_type': 'buy limit', 'symbol': 'EURUSD', 'volume': '1.0', 'price': '1.02991', 'stop_loss': '1.02980', 'take_profit': '1.03045', 'RR': '3.93'}
+MT5 request: {'action': 5, 'symbol': 'EURUSD', 'volume': 1.0, 'type': 2, 'price': 1.02991, 'sl': 1.0298, 'tp': 1.03045}
+MT5 response: OrderSendResult(retcode=10009, deal=0, order=3234278368, volume=1.0, price=0.0, bid=0.0, ask=0.0, comment='Request executed', request_id=3831702688, retcode_external=0, request=TradeRequest(action=5, magic=0, order=0, symbol='EURUSD', volume=1.0, price=1.02991, stoplimit=0.0, sl=1.0298, tp=1.03045, deviation=0, type=2, type_filling=0, type_time=0, expiration=0, comment='', position=0, position_by=0))
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:11] "POST /webhook HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:17] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:18] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:28] "[36mGET /static/favicon/favicon.ico HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:29] "GET /webhooks HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:30] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:32] "GET /logs HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:47:35] "GET /login HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+Login attempt for user: adminuser
+Login successful for adminuser
+127.0.0.1 - - [15/Jan/2025 16:47:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:47:39] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:40] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:42] "GET /webhooks HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:44] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:45] "GET /logs HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:48] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:47:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:50] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+127.0.0.1 - - [15/Jan/2025 16:47:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:47:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+127.0.0.1 - - [15/Jan/2025 16:48:26] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:48:26] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [15/Jan/2025 16:48:27] "[32mGET / HTTP/1.1[0m" 302 -
+127.0.0.1 - - [15/Jan/2025 16:48:28] "GET /login HTTP/1.1" 200 -
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'
+Price update error: 'str' object has no attribute 'includes'

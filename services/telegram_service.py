@@ -1,18 +1,22 @@
 import telebot
 import os
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class TelegramService:
     def __init__(self):
-        self.bot = telebot.TeleBot(os.getenv('TELEGRAM_BOT_TOKEN'))
-        self.chat_id = os.getenv('TELEGRAM_GROUP_ID')
+        self.bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
+        self.chat_id = os.getenv('TELEGRAM_CHAT_ID')
+        self.bot = telebot.TeleBot(self.bot_token)
         self.send_startup_message()
 
     def send_message(self, message):
         try:
             self.bot.send_message(self.chat_id, message, parse_mode='HTML')
         except Exception as e:
-            print(f"Telegram sending error: {str(e)}")
+            print(f"Failed to send telegram message: {str(e)}")
 
     def send_startup_message(self):
         self.send_message("🚀 <b>Telegram Bot Started</b>")
@@ -70,16 +74,40 @@ class TelegramService:
 
     def position_status_changed(self, position):
         message = (
-            "🔄 <b>Position Status Changed</b>\n\n"
+            f"🔄 Position Status Changed\n\n"
             f"Symbol: {position.symbol}\n"
             f"Type: {position.type}\n"
-            f"Entry: {position.price_open}\n"
-            f"Current Price: {position.price_close or 'N/A'}\n"
-            f"SL: {position.sl}\n"
-            f"TP: {position.tp}\n"
-            f"Volume: {position.volume}\n"
-            f"Profit: {position.profit}\n"
             f"Status: {position.status}\n"
-            f"Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            f"Volume: {position.volume}\n"
+            f"Entry: {position.price_open}\n"
+            f"Exit: {position.price_close}\n"
+            f"Profit: {position.profit}\n"
+            f"SL: {position.sl}\n"
+            f"TP: {position.tp}"
+        )
+        self.send_message(message)
+
+    def send_webhook_url(self, url):
+        message = (
+            "🔗 New Webhook URL Available\n\n"
+            f"URL: {url}/webhook\n\n"
+            "TradingView Alert Setup:\n"
+            "1. Go to TradingView Alert Settings\n"
+            "2. Set Webhook URL as above\n"
+            "3. Use format:\n"
+            "{\n"
+            '  "action": "OPEN",\n'
+            '  "symbol": "{{ticker}}",\n'
+            '  "type": "BUY",\n'
+            '  "price": {{close}}\n'
+            "}"
+        )
+        self.send_message(message)
+
+    def webhook_received(self, webhook_url):
+        message = (
+            f"🔗 New Webhook URL\n\n"
+            f"URL: {webhook_url}/webhook\n\n"
+            f"Use this URL in TradingView alerts"
         )
         self.send_message(message)
