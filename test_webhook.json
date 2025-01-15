@@ -1,0 +1,11 @@
+{
+    "password": "mamad",
+    "action": "open_position",
+    "symbol": "EURUSD",
+    "volume": 0.1,
+    "order_type": "buy limit",
+    "price": 1.02858,
+    "stop_loss": 1.02658,
+    "take_profit": 1.03058,
+    "expiration": "2024-03-25T23:59:59"
+}

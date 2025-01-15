@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Webhooks Card -->
+        <div class="col-md-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Webhooks</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="webhookTable_pageSize" class="form-label">Show</label>
+                            <select id="webhookTable_pageSize" class="form-select">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="webhookTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Action</th>
+                                    <th>Symbol</th>
+                                    <th>Volume</th>
+                                    <th>Order Type</th>
+                                    <th>Price</th>
+                                    <th>SL</th>
+                                    <th>TP</th>
+                                    <th>Status</th>
+                                    <th>Error Message</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for webhook in webhooks %}
+                                <tr>
+                                    <td>{{ webhook.id }}</td>
+                                    <td>{{ webhook.action }}</td>
+                                    <td>{{ webhook.symbol }}</td>
+                                    <td>{{ webhook.volume }}</td>
+                                    <td>{{ webhook.order_type }}</td>
+                                    <td>{{ webhook.price }}</td>
+                                    <td>{{ webhook.stop_loss }}</td>
+                                    <td>{{ webhook.take_profit }}</td>
+                                    <td>{{ webhook.status }}</td>
+                                    <td>{{ webhook.error_message }}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm" onclick="viewWebhookDetails('{{ webhook.id }}')">View</button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul class="pagination" id="webhookPagination"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Active Positions Card -->
+        <div class="col-md-7 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Active Positions</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="positionTable_pageSize" class="form-label">Show</label>
+                            <select id="positionTable_pageSize" class="form-select">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="positionTable">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Type</th>
+                                    <th>Volume</th>
+                                    <th>Entry</th>
+                                    <th>Current</th>
+                                    <th>SL</th>
+                                    <th>TP</th>
+                                    <th>P/L</th>
+                                    <th>R/R</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for position in positions if position.status in ['Open', 'Pending'] %}
+                                <tr id="position-{{ position.ticket }}">
+                                    <td>{{ position.symbol }}</td>
+                                    <td>{{ position.type }}</td>
+                                    <td>{{ position.volume }}</td>
+                                    <td>{{ position.price_open }}</td>
+                                    <td class="current-price">Loading...</td>
+                                    <td>{{ position.sl }}</td>
+                                    <td>{{ position.tp }}</td>
+                                    <td class="position-pl">Calculating...</td>
+                                    <td class="position-rr">Calculating...</td>
+                                    <td>{{ position.status }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul class="pagination" id="positionPagination"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Closed Positions Card -->
+        <div class="col-md-5 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Closed Positions</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="closedPositionTable_pageSize" class="form-label">Show</label>
+                            <select id="closedPositionTable_pageSize" class="form-select">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="closedPositionTable">
+                            <thead>
+                                <tr>
+                                    <th>Symbol</th>
+                                    <th>Type</th>
+                                    <th>Volume</th>
+                                    <th>Entry</th>
+                                    <th>Exit</th>
+                                    <th>SL</th>
+                                    <th>TP</th>
+                                    <th>P/L</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for position in positions if position.status == 'Closed' %}
+                                <tr>
+                                    <td>{{ position.symbol }}</td>
+                                    <td>{{ position.type }}</td>
+                                    <td>{{ position.volume }}</td>
+                                    <td>{{ position.price_open }}</td>
+                                    <td>{{ position.price_close }}</td>
+                                    <td>{{ position.sl }}</td>
+                                    <td>{{ position.tp }}</td>
+                                    <td>{{ position.profit }}</td>
+                                    <td>{{ position.status }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul class="pagination" id="closedPositionPagination"></ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Webhook Details Modal -->
+<div class="modal fade" id="webhookDetailModal" tabindex="-1" aria-labelledby="webhookDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="webhookDetailModalLabel">Webhook Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <pre id="webhookRequest"></pre>
+                <pre id="mt5Response"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
