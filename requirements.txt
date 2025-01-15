@@ -5,3 +5,4 @@ flask-login
 python-dotenv
 MetaTrader5
 eventlet
+gunicorn
