@@ -145,8 +145,8 @@ This project is licensed under the **MIT License**.
 ---
 
 ## 💬 Contact
-- 🔍 Telegram: [@your_telegram](https://t.me/your_telegram)
-- ✉️ Email: your@email.com
+- 🔍 Telegram: [@khodaei_mahdi](https://t.me/khodaei_mahdi)
+- ✉️ Email: mikhodaee@gmail.com
 
 ---
 
