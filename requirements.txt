@@ -1,29 +1,11 @@
-# Flask and Extensions
-Flask
-Flask-SocketIO
-Flask-SQLAlchemy
-Flask-Login
-Werkzeug
-
-# Database
-SQLAlchemy
-
-# Trading
-MetaTrader5
-numpy
-
-# WebSocket and Server
-eventlet
-gunicorn
-gevent-websocket
-
-# Environment and Config
-python-dotenv
-pyngrok
-
-# Telegram Integration
-pyTelegramBotAPI
-
-# Testing and Development
-pytest
-pytest-flask
+Flask==3.1.0
+Flask-Login==0.6.3
+Flask-SocketIO==5.5.1
+Flask-SQLAlchemy==3.1.1
+python-dotenv==1.0.1
+MetaTrader5==5.0.4738
+pyTelegramBotAPI==4.26.0
+SQLAlchemy==2.0.37
+Werkzeug==3.1.3
+pymysql==1.1.1
+sqlalchemy-utils==0.41.1

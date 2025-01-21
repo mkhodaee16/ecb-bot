@@ -1,11 +1,6 @@
-.vercel
+__pycache__/
+*.py[cod]
+.env
+.venv/
 *.log
-*.pyc
-__pycache__
-.venv
-venv/
-ENV/
-env.bak/
-venv.bak/
-instance/
-*.db
+.vscode/

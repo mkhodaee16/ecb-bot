@@ -11,20 +11,86 @@ import MetaTrader5 as mt5
 import threading
 import time
 from services.telegram_service import TelegramService
-from services.tunnel_service import TunnelService
 from functools import wraps
+from models import MT5Account, RestrictedSymbol, TradeLog, WebhookLog
+import urllib.parse
+from sqlalchemy_utils import database_exists, create_database
+import pymysql
+from sqlalchemy import create_engine
 
-# Load environment variables
+# Load environment variables and configure logging
 load_dotenv()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+def get_database_uri():
+    host = os.getenv('MYSQL_HOST')
+    port = os.getenv('MYSQL_PORT')
+    user = os.getenv('MYSQL_USER')
+    password = os.getenv('MYSQL_PASSWORD')
+    database = os.getenv('MYSQL_DATABASE')
+    
+    return f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
 
-# Flask app setup (MUST BE AT TOP)
+def init_database():
+    try:
+        uri = get_database_uri()
+        retries = 3
+        while retries > 0:
+            try:
+                engine = create_engine(uri)
+                engine.connect()
+                if not database_exists(uri):
+                    create_database(uri)
+                    logger.info(f"Created database {os.getenv('MYSQL_DATABASE')}")
+                return uri
+            except Exception as e:
+                retries -= 1
+                if retries == 0:
+                    raise
+                logger.warning(f"Connection attempt failed, retrying... ({retries} attempts left)")
+                time.sleep(2)
+    except Exception as e:
+        logger.error(f"Database initialization error: {e}")
+        return None
+
+# Update .env configuration
+def update_env():
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    with open(env_path, 'r') as file:
+        lines = file.readlines()
+    
+    with open(env_path, 'w') as file:
+        for line in lines:
+            if 'MYSQL_HOST' in line:
+                line = f'MYSQL_HOST=remote.runflare.com:31737\n'
+            file.write(line)
+
+# Initialize Flask app
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///trading_bot.db'
+
+# Configure database
+db_uri = init_database()
+if not db_uri:
+    raise RuntimeError("Failed to initialize database")
+
+app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+# Initialize SQLAlchemy
+db = SQLAlchemy(app)
+db.init_app(app)
+
+# Create all tables
+with app.app_context():
+    try:
+        db.create_all()
+        logger.info("Database tables created successfully")
+    except Exception as e:
+        logger.error(f"Failed to create tables: {e}")
+        raise
 
 # Initialize extensions
-db = SQLAlchemy(app)
 socketio = SocketIO(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -562,6 +628,50 @@ def webhooks():
     return render_template('webhooks.html', webhooks=webhooks)
 
 
+@app.route('/admin/accounts', methods=['GET'])
+@login_required
+def accounts():
+    accounts = MT5Account.query.all()
+    return render_template('accounts.html', accounts=accounts)
+
+@app.route('/admin/accounts/add', methods=['GET', 'POST'])
+@login_required
+def add_account():
+    if request.method == 'POST':
+        account = MT5Account(
+            login=request.form['login'],
+            password=request.form['password'],
+            server=request.form['server'],
+            name=request.form['name']
+        )
+        db.session.add(account)
+        db.session.commit()
+        return redirect(url_for('accounts'))
+    return render_template('add_account.html')
+
+@app.route('/admin/logs')
+@login_required
+def view_logs():
+    trade_logs = TradeLog.query.order_by(TradeLog.created_at.desc()).limit(100)
+    webhook_logs = WebhookLog.query.order_by(WebhookLog.created_at.desc()).limit(100)
+    return render_template('logs.html', trade_logs=trade_logs, webhook_logs=webhook_logs)
+
+def log_trade(account_id, trade_data):
+    log = TradeLog(
+        account_id=account_id,
+        symbol=trade_data['symbol'],
+        action=trade_data['action'],
+        type=trade_data['type'],
+        volume=trade_data['volume'],
+        price=trade_data['price'],
+        sl=trade_data.get('sl'),
+        tp=trade_data.get('tp'),
+        profit=trade_data.get('profit', 0)
+    )
+    db.session.add(log)
+    db.session.commit()
+
+
 def check_mt5_positions():
     if not mt5.initialize():
         logger.error("MT5 initialization failed")
@@ -665,12 +775,6 @@ if __name__ == "__main__":
         db.create_all()
         init_admin_user()
 
-    # Start tunnel service
-    tunnel_service = TunnelService(port=5000)
-    tunnel_url = tunnel_service.start_ngrok()  # or tunnel_service.start_localtunnel()
-    if tunnel_url:
-        logger.info(f"Webhook URL: {tunnel_url}/webhook")
-    
     # Start price update thread
     thread = threading.Thread(
         target=price_update_thread,
@@ -680,3 +784,11 @@ if __name__ == "__main__":
     thread.start()
 
     socketio.run(app, host='0.0.0.0', port=5000)
+
+if __name__ == '__main__':
+    try:
+        db.create_all()
+        print("Database connection successful!")
+        app.run(debug=True)
+    except Exception as e:
+        print(f"Error connecting to database: {e}")
