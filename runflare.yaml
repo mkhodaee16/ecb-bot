@@ -1,0 +1,22 @@
+app: tradingapp
+language: python
+version: 3.13
+env:
+  - MT5_LOGIN=${MT5_LOGIN}
+  - MT5_PASSWORD=${MT5_PASSWORD}
+  - MT5_SERVER=${MT5_SERVER}
+  - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+  - TELEGRAM_GROUP_ID=${TELEGRAM_GROUP_ID}
+  - MYSQL_USER=${MYSQL_USER}
+  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  - MYSQL_HOST=${MYSQL_HOST}
+  - MYSQL_PORT=${MYSQL_PORT}
+  - MYSQL_DATABASE=${MYSQL_DATABASE}
+  - SECRET_KEY=${SECRET_KEY}
+
+ports:
+  - 5000:5000
+
+commands:
+  - pip install -r requirements.txt
+  - python app.py

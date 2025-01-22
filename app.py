@@ -7,7 +7,7 @@ import os
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
-import MetaTrader5 as mt5
+import metatrader as mt5
 import threading
 import time
 from services.telegram_service import TelegramService
