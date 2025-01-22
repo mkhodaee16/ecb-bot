@@ -3,7 +3,7 @@ Flask-Login
 Flask-SocketIO
 Flask-SQLAlchemy
 python-dotenv
-MetaTrader
+MetaTrader5
 pyTelegramBotAPI
 SQLAlchemy
 Werkzeug

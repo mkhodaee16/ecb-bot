@@ -4461,3 +4461,243 @@ FROM position
 WHERE position.status IN (%(status_1_1)s, %(status_1_2)s)]
 [parameters: {'status_1_1': 'Open', 'status_1_2': 'Pending'}]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$xhaiOatqd5X2nWZQ$a7c5c502baaaaf71da6c5503175a9679fa44a3ff6a0483273f30f217237ffda881ffaa6f37d857ad110d03159f35c23222255704799c44aca760975aaad3a2f1'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Admin user created successfully
+127.0.0.1 - - [2025-01-22 20:28:10] "GET / HTTP/1.1" 302 351 0.001955
+127.0.0.1 - - [2025-01-22 20:28:12] "GET /login HTTP/1.1" 200 1749 0.015402
+127.0.0.1 - - [2025-01-22 20:28:14] "GET /static/favicon/favicon.ico HTTP/1.1" 200 15680 0.147799
+127.0.0.1 - - [2025-01-22 20:28:14] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.001552
+Login attempt for user: adminuser
+Login failed for adminuser
+127.0.0.1 - - [2025-01-22 20:29:05] "POST /login HTTP/1.1" 200 1973 1.417203
+127.0.0.1 - - [2025-01-22 20:29:06] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.001017
+Login attempt for user: adminuser
+Login successful for adminuser
+127.0.0.1 - - [2025-01-22 20:29:20] "POST /login HTTP/1.1" 302 586 1.392188
+127.0.0.1 - - [2025-01-22 20:29:21] "GET / HTTP/1.1" 200 9989 0.613135
+127.0.0.1 - - [2025-01-22 20:29:21] "GET /static/css/style.css HTTP/1.1" 200 1689 0.002169
+127.0.0.1 - - [2025-01-22 20:29:21] "GET /static/js/main.js HTTP/1.1" 200 6327 0.003035
+127.0.0.1 - - [2025-01-22 20:29:22] "GET /static/img/logo.png HTTP/1.1" 200 21521 0.002321
+127.0.0.1 - - [2025-01-22 20:29:22] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.000785
+127.0.0.1 - - [2025-01-22 20:29:22] "GET /static/js/main.js HTTP/1.1" 200 6327 0.001401
+127.0.0.1 - - [2025-01-22 21:04:37] "GET /accounts HTTP/1.1" 404 331 0.001456
+127.0.0.1 - - [2025-01-22 21:04:38] "GET /favicon.ico HTTP/1.1" 404 331 0.001349
+Price update error: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10053] An established connection was aborted by the software in your host machine)')
+[SQL: SELECT position.id AS position_id, position.timestamp AS position_timestamp, position.symbol AS position_symbol, position.ticket AS position_ticket, position.type AS position_type, position.volume AS position_volume, position.price_open AS position_price_open, position.price_close AS position_price_close, position.sl AS position_sl, position.tp AS position_tp, position.profit AS position_profit, position.status AS position_status 
+FROM position 
+WHERE position.status IN (%(status_1_1)s, %(status_1_2)s)]
+[parameters: {'status_1_1': 'Open', 'status_1_2': 'Pending'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+127.0.0.1 - - [2025-01-22 21:05:10] "GET /accounts HTTP/1.1" 404 331 0.001118
+127.0.0.1 - - [2025-01-22 21:05:13] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.001107
+Exception on /logs [GET]
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 864, in _execute_command
+    self._write_bytes(packet)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_GONE_ERROR, f"MySQL server has gone away ({e!r})"
+    )
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask_login\utils.py", line 284, in decorated_view
+    elif not current_user.is_authenticated:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\werkzeug\local.py", line 526, in _get_current_object
+    return get_name(local())
+                    ~~~~~^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask_login\utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+                                      ~~~~~~~~~^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask_login\utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\flask_login\login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\Users\Asus\Desktop\Work\tradeapp\new\metatrader-app-clean\app.py", line 207, in load_user
+    return db.session.get(User, int(user_id))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\scoping.py", line 1058, in get
+    return self._proxied.get(
+           ~~~~~~~~~~~~~~~~~^
+        entity,
+        ^^^^^^^
+    ...<6 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\session.py", line 3694, in get
+    return self._get_impl(
+           ~~~~~~~~~~~~~~^
+        entity,
+        ^^^^^^^
+    ...<7 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\session.py", line 3874, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self,
+        ^^^^^
+    ...<4 lines>...
+        conn,
+        ^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+        statement, params or {}, execution_options=execution_options
+    )
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+        self,
+        distilled_parameters,
+        execution_options or NO_OPTIONS,
+    )
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self, distilled_params, execution_options
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+        dialect,
+    ...<8 lines>...
+        cache_hit=cache_hit,
+    )
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        dialect, context, statement, parameters
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        e, str_statement, effective_parameters, cursor, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        cursor, str_statement, effective_parameters, context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\sqlalchemy\engine\default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    ~~~~~~~~~~^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 864, in _execute_command
+    self._write_bytes(packet)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\pymysql\connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+        CR.CR_SERVER_GONE_ERROR, f"MySQL server has gone away ({e!r})"
+    )
+sqlalchemy.exc.OperationalError: (pymysql.err.OperationalError) (2006, "MySQL server has gone away (ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))")
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.password_hash AS user_password_hash 
+FROM user 
+WHERE user.id = %(pk_1)s]
+[parameters: {'pk_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+127.0.0.1 - - [2025-01-22 22:37:06] "GET /logs HTTP/1.1" 500 415 1.279221
+127.0.0.1 - - [2025-01-22 22:37:09] "GET /logs HTTP/1.1" 200 21123 1.150408
+127.0.0.1 - - [2025-01-22 22:37:09] "GET /static/css/style.css HTTP/1.1" 304 183 0.017027
+127.0.0.1 - - [2025-01-22 22:37:10] "GET /static/img/logo.png HTTP/1.1" 304 184 0.013112
+127.0.0.1 - - [2025-01-22 22:37:10] "GET /static/js/main.js HTTP/1.1" 304 182 0.032060
+127.0.0.1 - - [2025-01-22 22:37:11] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.000899
+127.0.0.1 - - [2025-01-22 22:45:37] "GET / HTTP/1.1" 200 9989 1.373521
+127.0.0.1 - - [2025-01-22 22:45:38] "GET /static/css/style.css HTTP/1.1" 304 183 0.162138
+127.0.0.1 - - [2025-01-22 22:45:38] "GET /static/img/logo.png HTTP/1.1" 304 184 0.001693
+127.0.0.1 - - [2025-01-22 22:45:39] "GET /static/js/main.js HTTP/1.1" 304 182 0.001798
+127.0.0.1 - - [2025-01-22 22:45:40] "GET /static/favicon/site.webmanifest HTTP/1.1" 404 331 0.001082
+Received webhook data: {'status': 'test', 'tradekey': 'ICT@MoneyMaker2025!', 'action': 'open_position', 'order_type': 'buy limit', 'symbol': 'EURUSD', 'volume': '1.0', 'price': '1.02996', 'stop_loss': '1.02981', 'take_profit': '1.03045', 'RR': '3.93'}
+Webhook error: module 'metatrader' has no attribute 'initialize'
+127.0.0.1 - - [2025-01-22 22:45:53] "POST /webhook HTTP/1.1" 500 189 0.698918
