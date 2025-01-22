@@ -7,12 +7,12 @@ import os
 import logging
 from datetime import datetime
 from dotenv import load_dotenv
-import metatrader5 as mt5
+import MetaTrader5 as mt5
 import threading
 import time
 from services.telegram_service import TelegramService
 from functools import wraps
-from models import MT5Account, RestrictedSymbol, TradeLog, WebhookLog
+from models import MT5Account, RestrictedSymbol, TradeLog, WebhookLog, Position, Webhook, Log
 import urllib.parse
 from sqlalchemy_utils import database_exists, create_database
 import pymysql
@@ -151,50 +151,11 @@ def check_auth(f):
     return decorated_function
 
 
-# Database Models
-
-
-class Log(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-    level = db.Column(db.String(20))
-    message = db.Column(db.String(500))
-
-
-class Webhook(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-    action = db.Column(db.String(50))
-    symbol = db.Column(db.String(20))
-    volume = db.Column(db.Float)
-    order_type = db.Column(db.String(20))  # Modified to handle pending orders
-    price = db.Column(db.Float)  # Added for pending orders
-    stop_loss = db.Column(db.Float)
-    take_profit = db.Column(db.Float)
-    expiration = db.Column(db.DateTime)  # Added for pending orders
-    status = db.Column(db.String(20))
-    error_message = db.Column(db.String(200))
-
-
-class Position(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
-    symbol = db.Column(db.String(20))  # Fixed typo from 'symbo'
-    ticket = db.Column(db.Integer)
-    type = db.Column(db.String(20))
-    volume = db.Column(db.Float)
-    price_open = db.Column(db.Float)
-    price_close = db.Column(db.Float, nullable=True)
-    sl = db.Column(db.Float, nullable=True)
-    tp = db.Column(db.Float, nullable=True)
-    profit = db.Column(db.Float, nullable=True)
-    status = db.Column(db.String(20), default='Pending')
-
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    password_hash = db.Column(db.String(200), nullable=False)  # Increased size to 200
+    password_hash = db.Column(db.String(200), nullable=False)  
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -283,7 +244,6 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     try:
@@ -306,95 +266,325 @@ def webhook():
         if formatted_data["password"] != os.getenv("tradekey"):
             return jsonify({"error": "Invalid password"}), 403
 
-        # Initialize MT5
-        if not mt5.initialize():
-            return jsonify({"error": "MT5 initialization failed"}), 500
-
-        # Check symbol exists
-        symbol_info = mt5.symbol_info(formatted_data["symbol"])
-        if symbol_info is None:
-            return jsonify({"error": f"Symbol {formatted_data['symbol']} not found"}), 400
-
-        # Cancel existing pending positions with the same symbol
-        pending_positions = Position.query.filter_by(symbol=formatted_data["symbol"], status="Pending").all()
-        for pos in pending_positions:
-            cancel_request = {
-                "action": mt5.TRADE_ACTION_REMOVE,
-                "order": pos.ticket
-            }
-            result = mt5.order_send(cancel_request)
-            if result.retcode == mt5.TRADE_RETCODE_DONE:
-                pos.status = 'Cancelled'
-                db.session.commit()
-
-        # Create MT5 request
-        mt5_request = {
-            "action": mt5.TRADE_ACTION_PENDING,
-            "symbol": formatted_data["symbol"],
-            "volume": formatted_data["volume"],
-            "type": get_order_type(formatted_data["order_type"]),
-            "price": formatted_data["price"],
-            "sl": formatted_data["stop_loss"],
-            "tp": formatted_data["take_profit"]
-        }
-
-        # Log request details
-        logger.info(f"MT5 request: {mt5_request}")
-
-        result = mt5.order_send(mt5_request)
-        logger.info(f"MT5 response: {result}")
-
-        if result.retcode == mt5.TRADE_RETCODE_DONE:
-            position = Position(
-                symbol=formatted_data["symbol"],
-                ticket=result.order,
-                type=formatted_data["order_type"],
-                volume=formatted_data["volume"],
-                price_open=formatted_data["price"],
-                sl=formatted_data["stop_loss"],
-                tp=formatted_data["take_profit"],
-                status="Pending"
-            )
-            db.session.add(position)
-            db.session.commit()
-
-            # Save webhook data
-            webhook = Webhook(
-                action=formatted_data["action"],
-                symbol=formatted_data["symbol"],
-                volume=formatted_data["volume"],
-                order_type=formatted_data["order_type"],
-                price=formatted_data["price"],
-                stop_loss=formatted_data["stop_loss"],
-                take_profit=formatted_data["take_profit"],
-                status="Pending",
-                error_message=result.comment
-            )
-            db.session.add(webhook)
-            db.session.commit()
-
-            # Send telegram notification
-            telegram_service.position_opened(position)
-
-            # Emit WebSocket update
-            socketio.emit('webhook_received', {'webhook_id': result.order})
-
-            return jsonify({
-                "success": True,
-                "order": result.order,
-                "message": "Order placed successfully"
-            })
-        else:
-            return jsonify({
-                "error": f"MT5 error: {result.comment}",
-                "retcode": result.retcode
-            }), 400
+        # Handle position request
+        return handle_position_request(formatted_data)
 
     except ValueError as e:
         return jsonify({"error": f"Invalid number format: {str(e)}"}), 400
     except Exception as e:
         logger.error(f"Webhook error: {str(e)}")
         return jsonify({"error": str(e)}), 500
+
+def handle_position_request(data):
+    try:
+        # Delete existing pending orders for this symbol
+        delete_pending_orders(data['symbol'])
+        
+        # Create new position
+        position = Position(
+            symbol=data['symbol'],
+            type=data['order_type'],
+            volume=data['volume'],
+            price_open=data['price'],
+            sl=data['stop_loss'],
+            tp=data['take_profit'],
+            status='Pending'
+        )
+        db.session.add(position)
+        db.session.commit()
+
+        # Open positions for all active accounts
+        accounts = MT5Account.query.filter_by(is_active=True).all()
+        for account in accounts:
+            if not is_symbol_restricted(account.id, data['symbol']):
+                open_position_for_account(account, position)
+                
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        logger.error(f"Error handling position: {str(e)}")
+        return jsonify({'status': 'error', 'message': str(e)})
+
+def delete_pending_orders(symbol):
+    try:
+        # Find and delete existing pending orders
+        pending_positions = Position.query.filter_by(
+            symbol=symbol, 
+            status='Pending'
+        ).all()
+        
+        for position in pending_positions:
+            # Close MT5 orders
+            accounts = MT5Account.query.filter_by(is_active=True).all()
+            for account in accounts:
+                close_mt5_position(account, position)
+            
+            # Update database
+            position.status = 'Cancelled'
+            position.closed_at = datetime.utcnow()
+            
+        db.session.commit()
+    except Exception as e:
+        logger.error(f"Error deleting pending orders: {str(e)}")
+        raise
+
+def open_position_for_account(account, position):
+    if not mt5.initialize():
+        raise Exception(f"MT5 initialization failed for account {account.login}")
+        
+    if not mt5.login(account.login, account.password, account.server):
+        raise Exception(f"MT5 login failed for account {account.login}")
+    
+    try:
+        adjusted_volume = position.volume * account.volume_coefficient
+        
+        request = {
+            "action": mt5.TRADE_ACTION_DEAL,
+            "symbol": position.symbol,
+            "volume": adjusted_volume,
+            "type": get_order_type(position.type),
+            "price": position.price_open,
+            "sl": position.sl,
+            "tp": position.tp,
+            "deviation": 20,
+            "magic": 234000,
+            "comment": f"python script {position.id}",
+            "type_time": mt5.ORDER_TIME_GTC,
+            "type_filling": mt5.ORDER_FILLING_IOC,
+        }
+        
+        result = mt5.order_send(request)
+        if result.retcode != mt5.TRADE_RETCODE_DONE:
+            raise Exception(f"Order failed: {result.comment}")
+            
+        # Log trade
+        log_trade(account.id, position, result)
+        
+    finally:
+        mt5.shutdown()
+
+def update_trailing_stop():
+    open_positions = Position.query.filter_by(status='Open').all()
+    
+    for position in open_positions:
+        current_price = get_current_price(position.symbol)
+        
+        if position.type.startswith('Buy'):
+            new_sl = calculate_trailing_stop(
+                current_price, 
+                position.price_open, 
+                position.sl, 
+                'buy'
+            )
+        else:
+            new_sl = calculate_trailing_stop(
+                current_price, 
+                position.price_open, 
+                position.sl, 
+                'sell'
+            )
+            
+        if new_sl != position.sl:
+            update_position_sl(position, new_sl)
+
+def calculate_trailing_stop(current_price, open_price, current_sl, direction):
+    trail_points = 100  # Configurable trailing stop distance
+    
+    if direction == 'buy':
+        potential_sl = current_price - trail_points
+        return max(potential_sl, current_sl)
+    else:
+        potential_sl = current_price + trail_points
+        return min(potential_sl, current_sl)
+
+def update_position_sl(position, new_sl):
+    try:
+        position.sl = new_sl
+        db.session.commit()
+        
+        # Update SL in MT5
+        accounts = MT5Account.query.filter_by(is_active=True).all()
+        for account in accounts:
+            if not is_symbol_restricted(account.id, position.symbol):
+                update_mt5_position_sl(account, position)
+    except Exception as e:
+        logger.error(f"Error updating SL: {str(e)}")
+        raise
+
+def update_mt5_position_sl(account, position):
+    if not mt5.initialize():
+        raise Exception(f"MT5 initialization failed for account {account.login}")
+        
+    if not mt5.login(account.login, account.password, account.server):
+        raise Exception(f"MT5 login failed for account {account.login}")
+    
+    try:
+        request = {
+            "action": mt5.TRADE_ACTION_MODIFY,
+            "symbol": position.symbol,
+            "sl": position.sl,
+            "tp": position.tp,
+            "position": position.ticket
+        }
+        
+        result = mt5.order_send(request)
+        if result.retcode != mt5.TRADE_RETCODE_DONE:
+            raise Exception(f"Failed to update SL: {result.comment}")
+    finally:
+        mt5.shutdown()
+
+def is_symbol_restricted(account_id, symbol):
+    restricted_symbols = RestrictedSymbol.query.filter_by(account_id=account_id).all()
+    return any(restricted.symbol == symbol for restricted in restricted_symbols)
+
+def price_update_thread(app):
+    with app.app_context():
+        while True:
+            try:
+                # Get all active positions
+                positions = Position.query.filter(Position.status.in_(['Open', 'Pending'])).all()
+                
+                price_updates = {}
+                for pos in positions:
+                    symbol_info = mt5.symbol_info(pos.symbol)
+                    if symbol_info is None:
+                        continue
+
+                    price = symbol_info.bid if pos.type.lower().includes('buy') else symbol_info.ask
+                    change = price - pos.price_open
+                    price_updates[pos.symbol] = {
+                        'bid': symbol_info.bid,
+                        'ask': symbol_info.ask,
+                        'change': change
+                    }
+
+                    # Update trailing stop
+                    update_trailing_stop()
+
+                    # Update position status if needed
+                    if pos.status == 'Pending':
+                        # Check if pending order should be activated
+                        if (pos.type == 'Buy Limit' and price <= pos.price_open) or \
+                           (pos.type == 'Sell Limit' and price >= pos.price_open) or \
+                           (pos.type == 'Buy Stop' and price >= pos.price_open) or \
+                           (pos.type == 'Sell Stop' and price <= pos.price_open):
+                            pos.status = 'Open'
+                            db.session.commit()
+                            # Send telegram notification for status change
+                            telegram_service.position_status_changed(pos)
+                    elif pos.status == 'Open':
+                        # Check for SL/TP
+                        if pos.type.startswith('Buy'):
+                            if price <= pos.sl:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (price - pos.price_open) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                            elif price >= pos.tp:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (price - pos.price_open) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                        else:  # Sell positions
+                            if price >= pos.sl:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (pos.price_open - price) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+                            elif price <= pos.tp:
+                                pos.status = 'Closed'
+                                pos.price_close = price
+                                pos.profit = (pos.price_open - price) * pos.volume * 100000
+                                # Send telegram notification for status change
+                                telegram_service.position_status_changed(pos)
+
+                # Emit price updates via WebSocket
+                if price_updates:
+                    socketio.emit('price_update', {'prices': price_updates})
+
+                db.session.commit()
+                time.sleep(1)
+
+            except Exception as e:
+                logger.error(f"Price update error: {str(e)}")
+                time.sleep(5)
+
+def log_trade(account_id, position, result):
+    log = TradeLog(
+        account_id=account_id,
+        symbol=position.symbol,
+        action='open',
+        type=position.type,
+        volume=position.volume,
+        price=position.price_open,
+        sl=position.sl,
+        tp=position.tp,
+        profit=0  # Initial profit is 0
+    )
+    db.session.add(log)
+    db.session.commit()
+
+def get_current_price(symbol):
+    symbol_info = mt5.symbol_info(symbol)
+    if symbol_info is None:
+        raise Exception(f"Symbol {symbol} not found")
+    return symbol_info.bid if symbol_info.bid > 0 else symbol_info.ask
+
+def close_mt5_position(account, position):
+    if not mt5.initialize():
+        raise Exception(f"MT5 initialization failed for account {account.login}")
+        
+    if not mt5.login(account.login, account.password, account.server):
+        raise Exception(f"MT5 login failed for account {account.login}")
+    
+    try:
+        request = {
+            "action": mt5.TRADE_ACTION_DEAL,
+            "symbol": position.symbol,
+            "volume": position.volume,
+            "type": mt5.ORDER_TYPE_SELL if position.type.startswith('Buy') else mt5.ORDER_TYPE_BUY,
+            "position": position.ticket,
+            "price": mt5.symbol_info_tick(position.symbol).bid
+        }
+        
+        result = mt5.order_send(request)
+        if result.retcode != mt5.TRADE_RETCODE_DONE:
+            raise Exception(f"Failed to close position: {result.comment}")
+    finally:
+        mt5.shutdown()
+        
+    if not mt5.login(account.login, account.password, account.server):
+        raise Exception(f"MT5 login failed for account {account.login}")
+    
+    try:
+        request = {
+            "action": mt5.TRADE_ACTION_DEAL,
+            "symbol": position.symbol,
+            "volume": position.volume,
+            "type": mt5.ORDER_TYPE_SELL if position.type.startswith('Buy') else mt5.ORDER_TYPE_BUY,
+            "position": position.ticket,
+            "price": mt5.symbol_info_tick(position.symbol).bid
+        }
+        
+        result = mt5.order_send(request)
+        if result.retcode != mt5.TRADE_RETCODE_DONE:
+            raise Exception(f"Failed to close position: {result.comment}")
+    finally:
+        mt5.shutdown()
+
+def get_mt5_order_type(order_type):
+    order_types = {
+        "buy": mt5.ORDER_TYPE_BUY,
+        "sell": mt5.ORDER_TYPE_SELL,
+        "buy limit": mt5.ORDER_TYPE_BUY_LIMIT,
+        "sell limit": mt5.ORDER_TYPE_SELL_LIMIT,
+        "buy stop": mt5.ORDER_TYPE_BUY_STOP,
+        "sell stop": mt5.ORDER_TYPE_SELL_STOP
+    }
+    return order_types.get(order_type.lower(), mt5.ORDER_TYPE_BUY)
+
 
 
 @app.route('/')
@@ -476,7 +666,6 @@ def position_details(id):
         'profit': position.profit,
         'status': position.status
     })
-
 
 @app.route('/api/position/<int:ticket>/close', methods=['POST'])
 def close_position(ticket):
@@ -631,15 +820,34 @@ def accounts():
 def add_account():
     if request.method == 'POST':
         account = MT5Account(
+            name=request.form['name'],
             login=request.form['login'],
             password=request.form['password'],
             server=request.form['server'],
-            name=request.form['name']
+            volume_coefficient=float(request.form['volume_coefficient'])
         )
         db.session.add(account)
         db.session.commit()
+        flash('Account added successfully!', 'success')
         return redirect(url_for('accounts'))
     return render_template('add_account.html')
+
+@app.route('/admin/accounts/<int:id>/symbols', methods=['GET', 'POST'])
+@login_required
+def manage_symbols(id):
+    account = MT5Account.query.get_or_404(id)
+    if request.method == 'POST':
+        # Clear existing restrictions
+        RestrictedSymbol.query.filter_by(account_id=id).delete()
+        # Add new restrictions
+        symbols = request.form.getlist('symbols')
+        for symbol in symbols:
+            restriction = RestrictedSymbol(account_id=id, symbol=symbol)
+            db.session.add(restriction)
+        db.session.commit()
+        flash('Symbol restrictions updated!', 'success')
+        return redirect(url_for('accounts'))
+    return render_template('manage_symbols.html', account=account)
 
 @app.route('/admin/logs')
 @login_required

@@ -1,65 +1,49 @@
 import mysql.connector
 import os
 from dotenv import load_dotenv
+from flask import Flask
+from sqlalchemy import create_engine, text
+from sqlalchemy_utils import database_exists, create_database
+from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
 
+def get_database_uri():
+    return f"mysql+mysqlconnector://{os.getenv('MYSQL_USER')}:{os.getenv('MYSQL_PASSWORD')}@{os.getenv('MYSQL_HOST')}:{os.getenv('MYSQL_PORT')}/{os.getenv('MYSQL_DATABASE')}"
+
 def init_database():
     try:
-        # Connect to MySQL server
-        conn = mysql.connector.connect(
-            host=os.getenv('MYSQL_HOST'),
-            port=int(os.getenv('MYSQL_PORT')),
-            user=os.getenv('MYSQL_USER'),
-            password=os.getenv('MYSQL_PASSWORD')
-        )
+        uri = get_database_uri()
+        if not database_exists(uri):
+            create_database(uri)
+            print(f"Created database {os.getenv('MYSQL_DATABASE')}")
         
-        cursor = conn.cursor()
+        engine = create_engine(uri)
+        with engine.connect() as conn:
+            with open('schema.sql', 'r') as f:
+                queries = f.read().split(';')
+                for query in queries:
+                    if query.strip():
+                        conn.execute(text(query))
+                conn.commit()
         
-        # Check if the database already exists
-        database_name = os.getenv('MYSQL_DATABASE')
-        cursor.execute(f"SHOW DATABASES LIKE '{database_name}'")
-        result = cursor.fetchone()
-        
-        if result:
-            print(f"Database '{database_name}' already exists.")
-            cursor.close()
-            conn.close()
-            return
-        
-        # Create the database if it doesn't exist
-        cursor.execute(f"CREATE DATABASE {database_name}")
-        print(f"Database '{database_name}' created successfully.")
-        
-        # Switch to the new database
-        cursor.execute(f"USE {database_name}")
-        
-        # Read and execute schema.sql
-        schema_file_path = os.path.join(os.path.dirname(__file__), 'schema.sql')
-        if not os.path.exists(schema_file_path):
-            raise FileNotFoundError(f"Schema file '{schema_file_path}' not found.")
-        
-        with open(schema_file_path, 'r') as f:
-            sql_commands = f.read()
-        
-        for command in sql_commands.split(';'):
-            if command.strip():
-                cursor.execute(command)
-        
-        conn.commit()
-        print("Schema executed successfully.")
-        
-    except mysql.connector.Error as err:
-        print(f"Database error: {err}")
-    except FileNotFoundError as err:
-        print(err)
-    except Exception as err:
-        print(f"Unexpected error: {err}")
-    finally:
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
+        return uri
+    except Exception as e:
+        print(f"Database initialization error: {e}")
+        return None
+
+# Initialize Flask app
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = get_database_uri()
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+# Initialize extensions
+db = SQLAlchemy()
+# Initialize extensions
+db.init_app(app)
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == '__main__':
     init_database()

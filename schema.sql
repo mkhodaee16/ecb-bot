@@ -89,3 +89,28 @@ BEGIN
     )
 END
 GO
+-- Position Table
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[position]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[position](
+        [id] INT IDENTITY(1,1) PRIMARY KEY,
+        [account_id] INT NOT NULL,
+        [ticket] INT UNIQUE,
+        [symbol] VARCHAR(20) NOT NULL,
+        [type] VARCHAR(20),
+        [volume] FLOAT,
+        [price_open] FLOAT,
+        [price_close] FLOAT,
+        [sl] FLOAT,
+        [tp] FLOAT,
+        [profit] FLOAT,
+        [status] VARCHAR(20) DEFAULT 'Pending',
+        [created_at] DATETIME DEFAULT GETDATE(),
+        [closed_at] DATETIME NULL,
+        CONSTRAINT [FK_position_mt5_account] FOREIGN KEY ([account_id]) 
+        REFERENCES [dbo].[mt5_account] ([id])
+    )
+    ALTER TABLE [dbo].[position]
+    ALTER COLUMN message TEXT;
+END
+GO
