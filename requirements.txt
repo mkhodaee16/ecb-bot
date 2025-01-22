@@ -10,3 +10,4 @@ Werkzeug
 pymysql
 sqlalchemy-utils
 cryptography
+mysql-connector-python

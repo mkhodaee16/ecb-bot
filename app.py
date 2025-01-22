@@ -17,6 +17,8 @@ import urllib.parse
 from sqlalchemy_utils import database_exists, create_database
 import pymysql
 from sqlalchemy import create_engine
+from init_db import init_database
+init_database()
 
 # Load environment variables and configure logging
 load_dotenv()
@@ -79,19 +81,18 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # Initialize SQLAlchemy
 db = SQLAlchemy(app)
-db.init_app(app)
 
 # Create all tables
 with app.app_context():
     try:
         db.create_all()
-        logger.info("Database tables created successfully")
+        logger.info("Database tables created successfully") 
     except Exception as e:
         logger.error(f"Failed to create tables: {e}")
         raise
 
 # Initialize extensions
-socketio = SocketIO(app)
+socketio = SocketIO(app, async_mode='gevent')
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -107,15 +108,7 @@ telegram_service = TelegramService()
 
 
 def init_admin_user():
-    admin_user = User.query.filter_by(username=os.getenv('ADMIN_USER')).first()
-    if not admin_user:
-        admin_user = User(username=os.getenv('ADMIN_USER'))
-        admin_user.set_password(os.getenv('ADMIN_PASS'))
-        db.session.add(admin_user)
-        db.session.commit()
-        app.logger.info("Admin user created")
     try:
-        # Check if admin exists
         admin = User.query.filter_by(username=os.getenv('ADMIN_USER')).first()
         if not admin:
             admin = User(username=os.getenv('ADMIN_USER'))
@@ -201,14 +194,13 @@ class Position(db.Model):
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    password_hash = db.Column(db.String(120), nullable=False)
+    password_hash = db.Column(db.String(200), nullable=False)  # Increased size to 200
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -785,10 +777,5 @@ if __name__ == "__main__":
 
     socketio.run(app, host='0.0.0.0', port=5000)
 
-if __name__ == '__main__':
-    try:
-        db.create_all()
-        print("Database connection successful!")
-        app.run(debug=True)
-    except Exception as e:
-        print(f"Error connecting to database: {e}")
+with app.app_context():
+    db.create_all()

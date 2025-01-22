@@ -36,15 +36,6 @@ def create_or_update_admin():
             print(f"Error creating/updating admin: {str(e)}")
             return False
 
-def verify_admin():
-    with app.app_context():
-        try:
-            admin = User.query.filter_by(username=os.getenv('ADMIN_USER', 'admin')).first()
-            return bool(admin)
-        except Exception as e:
-            print(f"Error verifying admin: {str(e)}")
-            return False
-
 if __name__ == "__main__":
     success = create_or_update_admin()
     if not success:

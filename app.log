@@ -4435,3 +4435,11 @@ Failed to start ngrok: expected str, bytes or os.PathLike object, not NoneType
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.39.19:5000
 [33mPress CTRL+C to quit[0m
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$gT6Ih8MdIZei5G65$a745ba844f0c24be4c5e20f494bc3aa706e3c63b6515183f7d729733b114bf23a9de06dad23ca4235f58e78c44da823d49b949175912283b8ae284ff9f21de40'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$zOaeoVYQhxMi2gcD$efc8f6f21575a7461fb12570087f5a9445533fb1bac7eabd0f60c0330c2fb0c11e80a778e32ac0d85f5c5e0e78d3ff73b7a1b59ef477d8c3ff683353678ed89f'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
