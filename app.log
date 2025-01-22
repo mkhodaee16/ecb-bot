@@ -4443,3 +4443,21 @@ Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for col
 [SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
 [parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$zOaeoVYQhxMi2gcD$efc8f6f21575a7461fb12570087f5a9445533fb1bac7eabd0f60c0330c2fb0c11e80a778e32ac0d85f5c5e0e78d3ff73b7a1b59ef477d8c3ff683353678ed89f'}]
 (Background on this error at: https://sqlalche.me/e/20/9h9h)
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$j9LFJ9umxJTJHaF3$10d0a66d22df145378e04ff2cea96f3599777afe688f59219fabfc254d017df3f13d0af55a6cf08d25d076d434a57c062941d16c5c5efce32b203aa3fccb5a0e'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$LdofstcJV4PH8HbB$9ba43f0f70bbae844b9376cbb5d0e3a75d5768ac9550f01f7e8023e0489310dc5e0dcba26fe13535f344235374f8db50f07850fd304faa2f155b6f861123a4e6'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Error creating admin user: (pymysql.err.DataError) (1406, "Data too long for column 'password_hash' at row 1")
+[SQL: INSERT INTO user (username, password_hash) VALUES (%(username)s, %(password_hash)s)]
+[parameters: {'username': 'adminuser', 'password_hash': 'scrypt:32768:8:1$0o4KiYxzgKDCpay9$e15909d94b221e5741478946a554bb5ef0797f25af4a99836fb184b6d51513af976f2e00e11e9bca54082fdf589d9f90d25344f92b256fb5eaa7167c844ae54e'}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+Price update error: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query ([WinError 10054] An existing connection was forcibly closed by the remote host)')
+[SQL: SELECT position.id AS position_id, position.timestamp AS position_timestamp, position.symbol AS position_symbol, position.ticket AS position_ticket, position.type AS position_type, position.volume AS position_volume, position.price_open AS position_price_open, position.price_close AS position_price_close, position.sl AS position_sl, position.tp AS position_tp, position.profit AS position_profit, position.status AS position_status 
+FROM position 
+WHERE position.status IN (%(status_1_1)s, %(status_1_2)s)]
+[parameters: {'status_1_1': 'Open', 'status_1_2': 'Pending'}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

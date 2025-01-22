@@ -10,6 +10,25 @@ GO
 USE [tradingdjjm_db]
 GO
 
+-- User Table
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[user]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[user](
+        [id] INT IDENTITY(1,1) PRIMARY KEY,
+        [username] VARCHAR(80) NOT NULL UNIQUE,
+        [password_hash] VARCHAR(200) NOT NULL
+    )
+END
+GO
+
+-- Insert Admin User
+IF NOT EXISTS (SELECT * FROM [dbo].[user] WHERE username = 'adminuser')
+BEGIN
+    INSERT INTO [dbo].[user] (username, password_hash)
+    VALUES ('adminuser', 'hashed_password_here');
+END
+GO
+
 -- MT5 Accounts Table
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[mt5_account]') AND type in (N'U'))
 BEGIN
